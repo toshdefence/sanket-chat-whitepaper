@@ -12,7 +12,7 @@ In practice SANKET refuses to treat any of the following as sufficient grounds f
 - the caller is an administrator who owns the infrastructure;
 - the connection arrived through the edge proxy.
 
-![Zero trust policy evaluation](images/zerotrust.png)
+![Zero trust policy evaluation](../images/zerotrust.png)
 
 *Figure 8: Zero trust policy evaluation*
 

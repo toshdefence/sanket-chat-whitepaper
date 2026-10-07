@@ -20,7 +20,7 @@ The registration mode is a tenant policy. A Sanket ID is permanent: when an acco
 
 ## 13.2 Sign-In
 
-![Authentication flow](images/authflow.png)
+![Authentication flow](../images/authflow.png)
 
 *Figure 6: Authentication flow*
 

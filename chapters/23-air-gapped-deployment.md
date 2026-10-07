@@ -8,7 +8,7 @@ An air-gapped SANKET installation runs on a network with no path to the public i
 
 For the purposes of this document, a true air-gapped deployment is one in which the installation, its clients and its supporting services operate with no runtime access to any of: public DNS, cloud APIs, SaaS identity providers, public push services, external certificate authorities, content delivery networks, external analytics or telemetry, internet time servers, public package repositories, cloud key management, public object storage or external licence validation. SANKET supports this mode; the remaining dependencies are a function of the customer's client devices, as set out below.
 
-![Air-gapped deployment architecture](images/airgap.png)
+![Air-gapped deployment architecture](../images/airgap.png)
 
 *Figure 13: Air-gapped deployment architecture*
 

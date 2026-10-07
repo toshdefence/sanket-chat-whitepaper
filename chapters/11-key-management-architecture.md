@@ -6,7 +6,7 @@ Every key in SANKET has a defined origin, location, purpose and lifetime. The or
 
 Key lifecycle management follows the general model of NIST SP 800-57: generation, distribution, storage, use, rotation, revocation and destruction are defined for every key class.[^31]
 
-![Key hierarchy and lifecycle](images/keys.png)
+![Key hierarchy and lifecycle](../images/keys.png)
 
 *Figure 4: Key hierarchy and lifecycle*
 

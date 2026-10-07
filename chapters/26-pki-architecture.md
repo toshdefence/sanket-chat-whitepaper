@@ -4,7 +4,7 @@
 
 SANKET uses three distinct trust systems, and it is important not to confuse them: the customer's X.509 PKI for transport, libsignal identity keys for messaging, and Tosh Defence's signing keys for licences and releases.
 
-![PKI hierarchy](images/pki.png)
+![PKI hierarchy](../images/pki.png)
 
 *Figure 15: PKI hierarchy*
 

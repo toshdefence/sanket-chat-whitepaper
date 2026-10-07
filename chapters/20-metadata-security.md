@@ -41,7 +41,7 @@ End-to-end encryption hides what is said. It does not, by itself, hide who said 
 - **Edge logs mask identifiers** that appear in request paths.
 - **Last-seen visibility** can be restricted to contacts or nobody.
 
-![Notification path](images/push.png)
+![Notification path](../images/push.png)
 
 *Figure 12: Notification path*
 

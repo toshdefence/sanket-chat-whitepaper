@@ -6,7 +6,7 @@ In SANKET a device is a security principal in its own right. Access requires the
 
 > *User identity + Authorised device + Cryptographic device identity + Policy = Access*
 
-![Device registration and trust establishment](images/device.png)
+![Device registration and trust establishment](../images/device.png)
 
 *Figure 7: Device registration and trust establishment*
 

@@ -4,7 +4,7 @@
 
 This chapter follows a single message from composition to deletion and records, at each stage, where plaintext, ciphertext and keys exist, what metadata is produced and which threat each stage mitigates.
 
-![Message encryption lifecycle](images/msgflow.png)
+![Message encryption lifecycle](../images/msgflow.png)
 
 *Figure 9: Message encryption lifecycle*
 

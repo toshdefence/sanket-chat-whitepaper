@@ -11,7 +11,7 @@ Forward secrecy and post-compromise security are different properties that are o
 
 Both properties have been established for the Signal Protocol in peer-reviewed formal analysis.[^36] SANKET inherits them by using libsignal unmodified; it does not claim to have independently re-proved them.
 
-![Forward secrecy and post-compromise security on a message timeline](images/ratchet.png)
+![Forward secrecy and post-compromise security on a message timeline](../images/ratchet.png)
 
 *Figure 5: Forward secrecy and post-compromise security on a message timeline*
 

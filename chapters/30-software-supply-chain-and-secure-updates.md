@@ -33,7 +33,7 @@ An offline release package is a single archive with a SHA-256 sidecar, containin
 
 ## 30.3 Reference Update Process
 
-![Offline software update architecture](images/update.png)
+![Offline software update architecture](../images/update.png)
 
 *Figure 16: Offline software update architecture*
 

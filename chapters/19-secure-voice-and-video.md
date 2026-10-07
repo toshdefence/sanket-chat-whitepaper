@@ -4,7 +4,7 @@
 
 SANKET calls run through a self-hosted selective forwarding unit (SFU), with two independent layers of protection: end-to-end frame encryption between participants, and SRTP between each participant and the SFU.
 
-![Real-time call protection](images/calls.png)
+![Real-time call protection](../images/calls.png)
 
 *Figure 11: Real-time call protection*
 

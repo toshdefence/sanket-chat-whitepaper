@@ -19,7 +19,7 @@ A SANKET installation exposes a deliberately small network surface. This chapter
 
 Internally, the key service sits on a dedicated internal-only network reachable only from the components that need it, and the other services share an isolated application network. Inter-service traffic never leaves the host in the single-host profile. In the high-availability profile, database replication and the OpenBao cluster use TLS between hosts; place inter-host links on a dedicated network.
 
-![Network segmentation reference architecture](images/segmentation.png)
+![Network segmentation reference architecture](../images/segmentation.png)
 
 *Figure 14: Network segmentation reference architecture*
 

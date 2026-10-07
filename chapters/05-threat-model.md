@@ -35,7 +35,7 @@ A security architecture is only as meaningful as the threats it is evaluated aga
 
 Threats are organised by actor and mapped to the STRIDE categories of Spoofing, Tampering, Repudiation, Information disclosure, Denial of service and Elevation of privilege.[^1] MITRE ATT&CK provides a common vocabulary for the adversary techniques involved, and is referenced where it adds precision.[^2] For each actor the matrix records the objective, the attack surface, the principal controls and the residual exposure.
 
-![Security trust boundaries](images/trust.png)
+![Security trust boundaries](../images/trust.png)
 
 *Figure 1: Security trust boundaries*
 

@@ -4,7 +4,7 @@
 
 A SANKET installation is a self-contained set of services that a customer runs on its own infrastructure. Each customer has its own installation: there is no shared multi-tenant service and no vendor-operated component in the communication path.
 
-![Logical system architecture](images/logical.png)
+![Logical system architecture](../images/logical.png)
 
 *Figure 2: Logical system architecture*
 
@@ -60,7 +60,7 @@ The architecture is also defined by what it leaves out. A SANKET installation ha
 
 ## 7.4 Control Plane and Data Plane
 
-![Administrative control plane versus user data plane](images/planes.png)
+![Administrative control plane versus user data plane](../images/planes.png)
 
 *Figure 3: Administrative control plane versus user data plane*
 

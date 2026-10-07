@@ -4,7 +4,7 @@
 
 Files are encrypted before they leave the device, stored as opaque objects, and decrypted only on recipient devices.
 
-![File encryption and sharing flow](images/fileflow.png)
+![File encryption and sharing flow](../images/fileflow.png)
 
 *Figure 10: File encryption and sharing flow*
 
