@@ -1,3 +1,5 @@
+<p align="center"><a href="https://www.sanket.chat"><img src="images/sanket-logo.png" alt="SANKET by Tosh Defence - sovereign secure communications platform" width="420"></a></p>
+
 # SANKET Technical Security & Architecture Whitepaper
 
 **SANKET by Tosh Defence** (संकेत): Sovereign Secure Information Exchange Platform
@@ -8,7 +10,7 @@ Public edition, version 2.0, 7 October 2026. Document ID TD-SNK-WP-PUB-001. Lice
 
 SANKET is a sovereign, self-hosted secure communications platform: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, on infrastructure the organisation owns and can run on a closed or air-gapped network. This whitepaper sets out its threat model, cryptography, key management, identity and device controls, metadata handling, deployment and assurance, including what it does not claim.
 
-Website: www.sanket.chat. Security reports: security@toshdefence.com (see [SECURITY.md](SECURITY.md)).
+Website: [www.sanket.chat](https://www.sanket.chat). About SANKET, Tosh Defence and its founder: [ABOUT.md](ABOUT.md). Security reports: security@toshdefence.com (see [SECURITY.md](SECURITY.md)).
 
 ## Document Control
 

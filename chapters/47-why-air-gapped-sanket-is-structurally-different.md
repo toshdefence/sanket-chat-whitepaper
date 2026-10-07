@@ -2,6 +2,8 @@
 
 # 47. Why Air-Gapped SANKET Is Structurally Different
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Most security improvements reduce the probability of an attack succeeding. An isolated deployment does something different: it removes whole categories of attack path, because the parties and systems on those paths are no longer involved.
 
 ## 47.1 Trust Removed
@@ -32,6 +34,12 @@ What remains is inside the customer's control: servers, keys, identities, networ
 > In a conventional service, the customer's security depends on the security of every external party in the delivery chain, most of which the customer cannot inspect. In an air-gapped SANKET installation, combined with end-to-end encryption that keeps content from the customer's own servers, security depends on the customer's own people, endpoints and infrastructure, and on the integrity of the software it chose to install, which it can verify. That is a smaller, inspectable trust base.
 
 The remaining risks are real: insiders, endpoint compromise, the integrity of the release chain, and the operational discipline of the customer's own teams. Chapters 27 to 30 address them.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

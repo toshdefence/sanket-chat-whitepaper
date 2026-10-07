@@ -2,6 +2,8 @@
 
 # 31. Offline Licensing
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 A sovereign platform must not stop working because a vendor server is unreachable. SANKET licences are signed files verified entirely inside the installation.
 
 ## 31.1 Licence Format
@@ -47,6 +49,12 @@ A licence is a canonical, sorted-key JSON document and an Ed25519 signature, eac
 - Licences bind to the tenant identity and, optionally, to permitted image digests rather than to hardware, so that installations can be migrated, restored or rebuilt on new hardware without a licence reissue.
 - Deployment attestation evidence (Secure Boot state and measured-boot values) is reported for operational visibility.
 - Independent review of the licensing and release chain is a certification target (Chapter 40).
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

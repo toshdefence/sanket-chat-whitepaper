@@ -2,6 +2,8 @@
 
 # Appendix I - Glossary
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 | Term | Definition |
 | --- | --- |
 | **ABAC** | Attribute-based access control: decisions based on attributes of user, resource and context |
@@ -46,6 +48,12 @@
 | **X25519** | Diffie-Hellman function over Curve25519 (RFC 7748) |
 | **X3DH** | Extended Triple Diffie-Hellman, Signal's original asynchronous key agreement |
 | **Zero trust** | Security model in which no implicit trust is granted by network location or ownership (NIST SP 800-207) |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

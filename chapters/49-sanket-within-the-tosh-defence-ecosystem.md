@@ -2,7 +2,15 @@
 
 # 49. SANKET within the Tosh Defence Ecosystem
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Tosh Defence Private Limited builds sovereign software for high-trust environments, designed to be deployed on customer-controlled infrastructure. SANKET secures communications. Other Tosh Defence products address adjacent needs, including MAYA (cyber deception), DRISHYA (infrastructure visibility), SAJAG (predictive maintenance intelligence), RecordsKeeper AI (secure records intelligence) and TOSH AI (sovereign AI reasoning). Each is a separate product with its own architecture; nothing in this whitepaper describes or depends on them, and SANKET does not share data with them.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

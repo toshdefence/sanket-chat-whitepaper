@@ -2,6 +2,8 @@
 
 # 13. Identity and Authentication
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Every SANKET user is a customer-controlled identity, identified by a Sanket ID, and authenticated with a memorised secret and a second factor before any device-bound session is issued. Administrators are authenticated with a password and a FIDO2 security key.
 
 ## 13.1 Provisioning
@@ -123,6 +125,12 @@ Signed lists mean that a server that adds a device to an account cannot get mess
 - End users sign in on their phones with password and TOTP, with device binding and, optionally, device certificates; security keys are an administrator factor.
 - The customer's identity provider never replaces the local second factor and never creates accounts.
 - User X.509 certificates are not used; devices hold client certificates for mutual TLS (Chapter 26), and messaging identity remains libsignal identity keys.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

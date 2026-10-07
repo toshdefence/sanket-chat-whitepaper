@@ -2,6 +2,8 @@
 
 # 19. Secure Voice and Video
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET calls run through a self-hosted selective forwarding unit (SFU), with two independent layers of protection: end-to-end frame encryption between participants, and SRTP between each participant and the SFU.
 
 ![Real-time call protection](../images/calls.png)
@@ -85,6 +87,12 @@ Every installation sets the media server's address explicitly: the public addres
 ## 19.8 No Recording
 
 SANKET has no server-side call recording capability and no lawful-intercept interface, and its design excludes them: the server never holds frame keys.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # 22. Monitoring, Threat Detection and Observability
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET's detection capabilities are deterministic and rule-based. This chapter separates the protections that are always active from the optional components, and is explicit that the platform contains no machine-learning detection.
 
 ## 22.1 Always-Active Protections
@@ -79,6 +81,12 @@ A health endpoint reports database and licence state, and container health check
 > **Note - Container-log viewer and host privilege**
 >
 > The standard installation gives the application no host-level access for reading container logs; the administrator log viewer works only after an explicit operator opt-in. Customers with strict separation requirements collect container logs with their own host agents.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

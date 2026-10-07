@@ -2,6 +2,8 @@
 
 # 20. Metadata Security
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 End-to-end encryption hides what is said. It does not, by itself, hide who said it, to whom, when, how much or from where. For many high-trust organisations that metadata is as sensitive as content, so this chapter sets out exactly what SANKET's server handles.
 
 ## 20.1 Metadata Inventory
@@ -48,6 +50,12 @@ End-to-end encryption hides what is said. It does not, by itself, hide who said 
 ## 20.3 Content Confidentiality Versus Traffic-Analysis Resistance
 
 SANKET provides strong content confidentiality. It does not provide traffic-analysis resistance against the operator of the installation, nor against a network observer who can see device-to-installation traffic volumes and timing. Systems that resist traffic analysis use techniques such as sealed sender, constant-rate cover traffic, mixing or onion routing,[^56] which carry significant cost. SANKET does not provide sealed sender: the server sees the sending account and device of every message. For most customers the decisive mitigation is that the operator is the customer itself; where insider metadata analysis is a concern, access to the database and audit records should be separated and monitored (Chapter 27).
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

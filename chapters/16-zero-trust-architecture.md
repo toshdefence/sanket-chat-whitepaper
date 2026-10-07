@@ -2,6 +2,8 @@
 
 # 16. Zero Trust Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Zero trust, as defined by NIST, means that no implicit trust is granted to assets or accounts based on their network location or ownership, and that authentication and authorisation are discrete functions performed before each session to a resource.[^50]
 
 In practice SANKET refuses to treat any of the following as sufficient grounds for access:
@@ -48,6 +50,12 @@ A device-bound token proves that a session was issued to a device; a client cert
 - Device posture (patch level, root or jailbreak state) is supplied by the customer's MDM, and SANKET also checks the phone for root and jailbreak indicators itself, reporting them and, by policy, blocking use.
 - Network context (IP reputation, country) is used for rate limiting and blocking; administrator access can be limited to configured address ranges, enforced by the API, with the customer's edge as a further layer.
 - Internal service traffic stays on isolated container networks inside the host in the single-host profile. In the multi-host high-availability profile, database replication and traffic between OpenBao nodes run over TLS with AES-256-GCM only, and the device CA and revocation list are loaded on every edge host (Chapter 32).
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

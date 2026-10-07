@@ -2,6 +2,8 @@
 
 # 45. Security and Usability Trade-offs
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Every strong security property costs something. Stating the costs openly allows customers to choose policy deliberately.
 
 *Table 71: Principal trade-offs and how customers choose*
@@ -28,6 +30,12 @@ Every strong security property costs something. Stating the costs openly allows 
 | **Usage analytics vs data minimisation** | First-party operational insight | Pseudonymous usage counts held on the installation | Switch off; installation lock at provisioning; delete collected analytics |
 
 An external camera can always photograph a screen. No screenshot control changes that, and SANKET does not suggest otherwise.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

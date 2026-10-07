@@ -2,6 +2,8 @@
 
 # Appendix J - Standards and References
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 1. E. Rescorla, "The Transport Layer Security (TLS) Protocol Version 1.3", IETF RFC 8446, August 2018.
 2. T. Dierks, E. Rescorla, "The Transport Layer Security (TLS) Protocol Version 1.2", IETF RFC 5246, August 2008.
 3. Y. Sheffer, P. Saint-Andre, T. Fossati, "Recommendations for Secure Use of TLS and DTLS", IETF RFC 9325 (BCP 195), November 2022.
@@ -83,6 +85,12 @@
 79. J. Samuel, N. Mathewson, J. Cappos, R. Dingledine, "Survivable Key Compromise in Software Update Systems", ACM CCS 2010; and "The Update Framework Specification".
 
 Product documentation cited for SANKET components refers to the upstream open-source projects named; their inclusion does not imply endorsement by those projects.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # 24. Offline-First Operation
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET is designed for intermittent connectivity. Clients keep working with local data while disconnected, and the server holds encrypted messages until devices return.
 
 > [!IMPORTANT]
@@ -29,6 +31,12 @@ SANKET is designed for intermittent connectivity. Clients keep working with loca
 | **Queue protection** | Server queues hold only ciphertext; local outboxes are inside the encrypted database, and a queued file only as an encrypted copy that is deleted once it is sent, dropped or discarded |
 | **Queue size** | Per-user send rates and fan-out caps bound queue growth; delivered rows are tombstoned |
 | **Low bandwidth** | A narrowband call profile reduces audio and video bit rates for constrained links |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

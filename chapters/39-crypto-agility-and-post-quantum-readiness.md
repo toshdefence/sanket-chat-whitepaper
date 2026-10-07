@@ -2,6 +2,8 @@
 
 # 39. Crypto-Agility and Post-Quantum Readiness
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Cryptographic algorithms age. A platform intended to protect information for years must be able to change its primitives without being rebuilt,[^68] and must plan now for the arrival of cryptographically relevant quantum computers.
 
 ## 39.1 Crypto-Agility in the Current Architecture
@@ -64,6 +66,12 @@ The edge records only the negotiated group name for each connection, with no cli
 > **Security Property - Post-quantum position**
 >
 > SANKET messaging is protected by hybrid post-quantum cryptography at both session establishment (PQXDH) and in the ongoing ratchet (SPQR), so an adversary must break both the classical and the post-quantum components. Transport key exchange is hybrid post-quantum at the edge for every client whose platform offers it, and on the server's outbound connections. Symmetric encryption uses 256-bit keys throughout. Signatures, transport for the remaining client paths and some auxiliary key exchanges remain classical and follow the roadmap above.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # 6. Security Architecture Principles
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Twenty-four principles govern SANKET's design. Each is stated with the specific mechanism through which the current release applies it, so that the principle can be tested rather than taken on trust.
 
 *Table 9: Security architecture principles and how SANKET applies them*
@@ -52,6 +54,12 @@ Security documents often blur distinct properties under broad labels. SANKET use
 > **Note - Why SANKET avoids the phrase "zero knowledge"**
 >
 > The phrase is often used loosely to mean that the server holds only ciphertext of content. SANKET uses the more precise term server-blind content, because a messaging server necessarily learns who is communicating, and lists that metadata explicitly.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

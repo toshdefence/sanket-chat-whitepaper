@@ -2,6 +2,8 @@
 
 # 14. Device Trust Model
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 In SANKET a device is a security principal in its own right. Access requires the conjunction of four things.
 
 > *User identity + Authorised device + Cryptographic device identity + Policy = Access*
@@ -89,6 +91,12 @@ The administrator sets a minimum app version for iPhone and for Android separate
 Senders learn a recipient's devices from the installation, but they no longer have to trust that list as served. Each account's device list is signed by its account list key, the installation keeps an append-only log of the signed lists, and every sender, mobile and desktop alike, verifies the signed list before it encrypts on any fan-out path (Chapter 13). A device that the server lists but the signed list does not receives no copy, and the user sees why. Identity keys are pinned, and device caps, administrator approval, user-visible device inventories, audit events and safety-number comparison continue to make any unexpected device visible to users and administrators.
 
 When a contact's identity key changes, users are notified in every shared conversation. A device that was offline when the key changed receives the notice when it next connects: the server keeps the notice for each recipient device until that device acknowledges it, and a device can acknowledge only its own notices.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

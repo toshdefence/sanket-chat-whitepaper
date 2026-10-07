@@ -2,6 +2,8 @@
 
 # 23. Air-Gapped Deployment
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 An air-gapped SANKET installation runs on a network with no path to the public internet. Everything it needs at run time is inside the enclave, and everything it needs from outside arrives on controlled media.
 
 ## 23.1 Definition
@@ -56,6 +58,12 @@ For the purposes of this document, a true air-gapped deployment is one in which 
 > **Security Property - Result**
 >
 > In an air-gapped installation, no SANKET component makes a connection outside the enclave (device attestation, identity providers and release checks all work offline), and no vendor or third party can observe, alter or interrupt the service. The residual dependencies are the customer's own infrastructure and, for iOS devices, the limits of the operating system.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # 7. System Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 A SANKET installation is a self-contained set of services that a customer runs on its own infrastructure. Each customer has its own installation: there is no shared multi-tenant service and no vendor-operated component in the communication path.
 
 ![Logical system architecture](../images/logical.png)
@@ -70,6 +72,12 @@ Administrators govern who exists, which devices are trusted, what features are e
 > **Note - Device governance and content**
 >
 > Because the control plane decides which devices belong to an account, SANKET does not let it add a device silently. Each account's device list is signed by the account's own devices and kept in an append-only log, and senders verify that signed list before they encrypt, so a device the server or an administrator inserts receives no copy of any message, call key or broadcast. Device caps, optional administrator approval, identity pinning on first contact, device inventories visible to users, safety-number comparison and audit events complete the picture (Chapter 14).
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

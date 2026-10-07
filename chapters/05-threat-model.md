@@ -2,6 +2,8 @@
 
 # 5. Threat Model
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 A security architecture is only as meaningful as the threats it is evaluated against. This chapter states the assets SANKET protects, the trust assumptions it makes, and the threat actors it is designed to resist, with the residual risk that remains for each.
 
 ## 5.1 Assets
@@ -82,6 +84,12 @@ Three conclusions follow from the matrix and shape the rest of the architecture.
 1. **Content confidentiality is robust against network and server compromise.** Every network and server-side actor in the matrix obtains at most ciphertext of message bodies, files, reactions, encrypted broadcasts and classification labels, because the keys exist only on endpoints, and senders encrypt only for devices on each account's signed device list. This is the core property that end-to-end encryption delivers.
 2. **Metadata and availability are where server-side actors retain power.** A compromised server, database or privileged administrator can learn communication patterns and can deny service. Self-hosting confines that exposure to the customer's own staff and infrastructure, rather than eliminating it.
 3. **Endpoints and insiders remain the hardest problem.** No cryptographic design protects plaintext from a fully compromised authorised device or from an authorised reader. SANKET reduces the exposure with local encryption, device governance and policy, and is explicit that the residual risk is significant.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

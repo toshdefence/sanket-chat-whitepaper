@@ -2,6 +2,8 @@
 
 # 42. Secure Deployment Baseline
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 A self-hosted platform is only as strong as the host it runs on. The baseline below separates what the SANKET installation provides from what the customer should apply.
 
 ## 42.1 Provided by the Platform
@@ -49,6 +51,12 @@ The single-host profile favours compatibility with the widest range of customer 
 | **Backups** | Scheduled encrypted backups to separate media; periodic restore tests |
 | **Immutable infrastructure** | Rebuild hosts from known-good images rather than patching in place where practical |
 | **Monitoring** | Certificate expiry, disk, memory and service health alerts |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

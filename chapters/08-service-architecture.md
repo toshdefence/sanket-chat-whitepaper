@@ -2,6 +2,8 @@
 
 # 8. Service Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET separates functions into containers with distinct privileges, so that the failure or compromise of one function has a bounded effect. This chapter describes each service's responsibility, the controls around it and the effect of its failure.
 
 ## 8.1 Why Separation Matters
@@ -33,6 +35,12 @@ The application tier is intentionally consolidated: authentication, messaging re
 | **PostgreSQL / Redis** | Persistent state; cache and live state | No host ports; authentication on Redis; Redis split into an evictable cache and a state instance that never evicts; streaming replication and Sentinel in the high-availability profile | Service unavailable |
 | **Analytics processor** | Aggregate first-party usage events | Inside the installation, no third party; health monitored; can be switched off by the organisation or locked off at provisioning | Analytics stop; chat and calls unaffected |
 | **Threat processor (optional)** | Rule-based detection on event stream | Separate database; configurable | Alerts from this source stop; built-in protections continue |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

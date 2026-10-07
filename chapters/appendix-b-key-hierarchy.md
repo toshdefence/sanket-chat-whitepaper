@@ -2,6 +2,8 @@
 
 # Appendix B - Key Hierarchy
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 The complete key inventory, with origin, storage, purpose, rotation and exposure consequence for each key, is in Chapter 11 (Key Management Architecture) and its figure. In summary:
 
 | Tier | Keys | Custodian |
@@ -11,6 +13,12 @@ The complete key inventory, with origin, storage, purpose, rotation and exposure
 | **Installation tier** | Edge TLS key; device certificate issuing key (OpenBao PKI); token secrets; field and TOTP keys; OpenBao Transit keys; push payload keys; identity-provider secrets; backup passphrase | Customer operator |
 | **Customer PKI tier** | Root and issuing CA keys | Customer PKI administrator |
 | **Vendor tier** | Licence, release and release-timestamp signing keys (public halves only in the installation) | Tosh Defence |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,10 @@
 
 # 1. Executive Summary
 
+<p align="center"><a href="https://www.sanket.chat"><img src="../images/sanket-logo.png" alt="SANKET by Tosh Defence - sovereign secure communications platform" width="320"></a></p>
+
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET is a sovereign secure information exchange platform. It gives an organisation end-to-end encrypted messaging, file exchange, voice and video, and priority broadcast with acknowledgement, on infrastructure that the organisation owns, operates and can disconnect from the public internet.
 
 ## 1.1 The Sovereign Communications Problem
@@ -53,6 +57,12 @@ No single property is sufficient. Strong cryptography on a vendor-operated servi
 > **Key Point - How claims are made in this document**
 >
 > Every technical statement in this whitepaper was checked against the SANKET platform source code at the release described in Chapter 2. Where a capability is planned, optional or dependent on deployment choices, the text says so, and every design boundary is stated with its rationale. Cryptographic statements were checked against the primary specifications cited in the footnotes.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

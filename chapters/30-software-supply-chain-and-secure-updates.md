@@ -2,6 +2,8 @@
 
 # 30. Software Supply Chain and Secure Updates
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 A communications platform is only as trustworthy as the process that produces and delivers its software. SANKET gives the customer the means to verify a release independently and to decide when it is installed.
 
 ## 30.1 Supply-Chain Controls
@@ -64,6 +66,12 @@ The verification tool uses only built-in platform cryptography and can be run on
 - **Release selection:** which signed releases may be installed is governed by the customer's change management. An expired release is refused, so an old release cannot be presented as current indefinitely, and downgrades are refused by the signed sequence number as well as the release version unless explicitly authorised and recorded in the release audit log. A server also refuses a signed licence that requires a newer backend release. An organisation can therefore still roll back deliberately to an earlier signed release when operationally required.
 - **Emergency patches** follow the same signed path; a configuration-only release can update the configuration bundle without new images.
 - **Connected upgrades** (optional) fetch packages and their SBOMs with short-lived, signed download authorisations, check the registry's signed timestamp statement, verify the package and run the same process. Upgrade execution from the console is off by default.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

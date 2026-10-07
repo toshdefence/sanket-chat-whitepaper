@@ -2,6 +2,8 @@
 
 # 11. Key Management Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Every key in SANKET has a defined origin, location, purpose and lifetime. The organising principle is simple: keys that protect content are created and held on endpoints; keys that protect the installation are created and held inside the customer's installation; Tosh Defence holds only the keys that sign licences and releases.
 
 Key lifecycle management follows the general model of NIST SP 800-57: generation, distribution, storage, use, rotation, revocation and destruction are defined for every key class.[^31]
@@ -96,6 +98,12 @@ In the high-availability profile OpenBao runs as a three-node raft cluster with 
 ## 11.7 Hardware Security Modules
 
 SANKET does not require an HSM. The released configuration unseals OpenBao with a Shamir key-share ceremony, on every node of the cluster in the high-availability profile. Customers whose policy requires hardware protection are recommended to hold their root CA in an HSM and to evaluate OpenBao's auto-unseal options against their HSM or key-management infrastructure (Chapter 33). Neither is part of the released configuration.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

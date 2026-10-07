@@ -2,6 +2,8 @@
 
 # 12. Forward Secrecy and Post-Compromise Security
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Forward secrecy and post-compromise security are different properties that are often conflated. One protects the past against a future compromise; the other restores protection for the future after a compromise has ended.
 
 ## 12.1 Definitions
@@ -49,6 +51,12 @@ Both properties have been established for the Signal Protocol in peer-reviewed f
 > - It does not protect a user's identity key held in the optional vault backup. That copy is protected by the vault password.
 >
 > - It does not apply to routing metadata or to notice broadcasts (the announcement type that is labelled as not end-to-end encrypted), which are handled by the server as described in Chapter 20. Replies, reactions, classification labels, encrypted broadcasts, link previews, locations, contact cards and forwarded-message references travel inside the ciphertext and are covered.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

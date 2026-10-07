@@ -2,6 +2,8 @@
 
 # Appendix G - Security Hardening Checklist
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 ☐  Hardened, minimal host OS with Secure Boot and TPM; full-disk encryption on all volumes.
 
 ☐  SELinux or AppArmor enforcing; host firewall allowing only HTTPS and media ports inbound.
@@ -39,6 +41,12 @@
 ☐  Managed devices enrolled in MDM with SANKET managed configuration.
 
 ☐  Certificate pinning configured on clients.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

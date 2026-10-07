@@ -2,6 +2,8 @@
 
 # 48. Comparative Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 The comparison below is between architectural categories, not named products. Individual products within a category vary; the columns describe typical properties of the category. For the SANKET column, the properties are those of the described release. Protocol properties such as forward secrecy and post-compromise security differ materially between products in every category and should be checked against published analyses rather than assumed.
 
 *Table 73: Architectural categories compared*
@@ -25,6 +27,12 @@ The comparison below is between architectural categories, not named products. In
 | **Crypto-agility** | Provider decides | Provider decides | Varies | Profile-negotiated calls; versioned protocol and content envelope; hybrid post-quantum TLS key exchange offered first; single crypto helpers |
 | **High availability** | Provider-managed | Provider-managed | Varies | Multi-host profile with an asynchronous second site, or single host |
 | **Certification flexibility** | Provider decides | Provider certifications | Varies | Customer-specific evaluation possible; no certification yet |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

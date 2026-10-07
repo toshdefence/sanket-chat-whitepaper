@@ -2,6 +2,8 @@
 
 # 29. Endpoint Compromise Analysis
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 End-to-end encryption does not protect plaintext on a fully compromised authorised endpoint. The endpoint is where messages are decrypted, displayed and typed; an attacker who controls it sees what the user sees.
 
 *Table 51: Endpoint threats and SANKET mitigations*
@@ -36,6 +38,12 @@ The desktop app runs the same protocol, the same message, call and broadcast sem
 > **Note - Residual endpoint risk**
 >
 > A device that is compromised before it is revoked exposes everything it could decrypt during the compromise. Revocation and wipe protect against continued exposure and against an attacker who obtains the device later; they do not undo exposure that has already happened. Plaintext that a user has legitimately exported, photographed or forwarded is outside SANKET's control.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

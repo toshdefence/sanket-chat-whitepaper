@@ -2,6 +2,8 @@
 
 # 3. Who SANKET Is For
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET is built for organisations whose communications would cause serious harm if they were read, altered, withheld or mapped by an outside party, and that cannot accept an outside party holding the infrastructure, the keys or the logs.
 
 The common factor is not a sector. It is a security requirement: confidentiality and integrity must hold even if the communications provider, the hosting provider or the network is not trusted. That rules out designs in which a third party operates the service, holds the content or decides when it changes. The environments below share that requirement.
@@ -26,6 +28,12 @@ The common factor is not a sector. It is a security requirement: confidentiality
 > **Key Point - Not a consumer product**
 >
 > SANKET has no public service that anyone can join, no global directory and no vendor-operated server that end users connect to. Users exist only inside an installation the customer controls, and the customer decides how they are admitted: by administrator provisioning, by directory provisioning, or by single-use invitation (the default). That removes several attack paths that consumer services have by design, including account creation by an arbitrary adversary, contact discovery across organisations, and vendor-side access to the user graph.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

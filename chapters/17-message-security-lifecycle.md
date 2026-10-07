@@ -2,6 +2,8 @@
 
 # 17. Message Security Lifecycle
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 This chapter follows a single message from composition to deletion and records, at each stage, where plaintext, ciphertext and keys exist, what metadata is produced and which threat each stage mitigates.
 
 ![Message encryption lifecycle](../images/msgflow.png)
@@ -67,6 +69,12 @@ Push messages, notification records, escalation reminders and administrator aler
 - **Delete for everyone** (configurable, within a time window): the server blanks every copy. Recipients' clients remove the message; a recipient who has already read or copied it may retain that knowledge.
 - **Delete for me:** removes the message from the user's own view and device.
 - **Disappearing messages** (configurable): when allowed by policy, users choose durations from one hour to ninety days; administrators can force a maximum duration, from 30 seconds to 30 days, and the shorter of it and the user's own choice applies. Expired messages are deleted from the server and purged from device caches and attachments.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

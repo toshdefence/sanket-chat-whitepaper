@@ -2,6 +2,8 @@
 
 # 43. External Dependency Analysis
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 The table lists every category of external service a communications platform commonly depends on, and how SANKET handles it in connected and air-gapped deployments.
 
 *Table 68: External dependency analysis*
@@ -50,6 +52,12 @@ SANKET's rule is that every cryptographic library has at least one published ind
 > **Key Point - Architectural statement**
 >
 > SANKET is designed with no mandatory foreign runtime dependency for sovereign deployment. An air-gapped installation operates with no external service at all. A connected installation can be configured with none, at the cost of iOS background wake-ups. Build-time tooling used by Tosh Defence (source hosting, public package and image registries, mobile build services) is a supply-chain consideration addressed by the signed release process in Chapter 30, not a runtime dependency of the customer's installation.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

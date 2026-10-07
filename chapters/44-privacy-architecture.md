@@ -2,6 +2,8 @@
 
 # 44. Privacy Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET is designed to collect what it needs to deliver communications securely, to keep it inside the customer's boundary, and to delete it on a defined schedule. Customers remain the controllers of personal data in their installations; this chapter describes the technical measures, not legal compliance.
 
 ## 44.1 Principles Applied
@@ -41,6 +43,12 @@ SANKET is designed to collect what it needs to deliver communications securely, 
 Personal data held by the server comprises the Sanket ID, display name, optional email and phone, profile fields, device information (platform, model, app version, hardware protection level and the fingerprint of the device's client certificate, which itself carries an opaque random name), each account's signed device list, IP addresses and user agents in audit records, group memberships and names, and communication metadata (Chapter 20). Where federated sign-in is configured, it also holds the mapping from the customer's identity provider or directory to the administrator account or Sanket ID; accounts are never created from the provider. Email and phone are stored in clear.
 
 The server does not hold the emoji of any reaction (where the large-group count option is on, it learns only who reacted to which message), the title, body or attachments of an encrypted broadcast (only its audience, priority, deadline, expiry and receipts; notice broadcasts remain readable), or the classification label of any message or file. Usage analytics are pseudonymous counts, collected only while the organisation's switch is on and never on an installation locked against them; the organisation can delete everything collected at any time. Audit records and the app version each device reports for update enforcement are not analytics and are kept regardless. End users can review their own security activity. Export of user data by users is off by default.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

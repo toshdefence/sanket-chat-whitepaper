@@ -2,6 +2,8 @@
 
 # 36. Deployment Mode Comparison
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET is deployed in three modes. They are not ranked: each suits a different combination of security requirement, connectivity and operating capacity. In every mode the installation is dedicated to one customer, and every mode can run either the single-host Edge profile or the multi-host high-availability profile, with an optional second site for disaster recovery (Chapter 32). The topology is chosen per installation in its environment file and role overlays; the files shipped in a release are the same for every customer.
 
 *Table 59: Deployment modes compared*
@@ -24,6 +26,12 @@ SANKET is deployed in three modes. They are not ranked: each suits a different c
 | **Operational control** | Shared between customer and contracted operator | Customer | Customer |
 | **Sovereignty level** | High: jurisdiction and data stay sovereign; the operator is a party to trust | Very high | Highest available |
 | **Ideal use case** | Organisations needing fast deployment without their own data centre operations | Organisations with their own infrastructure and security operations | Classified-adjacent, defence and critical environments where any external path is unacceptable |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # 2. Release Baseline and Capability Status
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 This chapter fixes the release that the whitepaper describes and summarises, in one place, the status of every major security capability and the design boundaries that an evaluator should understand.
 
 ## 2.1 Baseline Described
@@ -88,6 +90,12 @@ Every secure platform makes deliberate choices about what the server must proces
 | **Out-of-band assurance of a contact's identity comes from safety-number comparison** | Device additions are covered by signed device lists; identity keys are pinned and any change is flagged until compared again, the model used by mainstream Signal-protocol deployments | Safety-number comparison; identity-change notice in every shared conversation; device inventories; administrator device approval | 14, 28 |
 | **Connected installations may use Apple push for iOS wake-ups** | iOS background wake-up is available only through Apple; it carries no user data. The media server never uses public STUN: its address is set at installation | Run iOS without Apple push; air-gapped installations do not use it | 19, 43 |
 | **High availability across sites is asynchronous** | Synchronous replication between distant sites would tie every write to the inter-site link; the reference topology is designed for RPO 5 minutes and RTO 1 hour | Each disaster-recovery drill records the measured figures; zero data loss across sites is not part of the built profile | 32 |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # 18. File Security Lifecycle
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Files are encrypted before they leave the device, stored as opaque objects, and decrypted only on recipient devices.
 
 ![File encryption and sharing flow](../images/fileflow.png)
@@ -43,6 +45,12 @@ Documents open inside the application, so the sharing restriction never leaves a
 > **Note - Revocation and plaintext already obtained**
 >
 > Removing a member, revoking a device, or deleting an object prevents future downloads and future decryption on revoked devices. It cannot recall a file that an authorised recipient has already downloaded, decrypted, exported, printed or photographed. File access follows conversation membership, so removing a member is the revocation action.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

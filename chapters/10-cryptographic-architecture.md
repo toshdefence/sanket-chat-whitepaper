@@ -2,6 +2,8 @@
 
 # 10. Cryptographic Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET layers several independent cryptographic mechanisms. Each protects a different asset at a different point, and each is described here as implemented in the baseline release, with the primary specification it follows.
 
 *Table 16: Cryptographic layers*
@@ -164,6 +166,12 @@ The DEK is never stored in the clear. It is wrapped with an envelope: an ephemer
 The backup tooling writes the database dumps, the attachment bucket, OpenBao data and configuration as separate artefacts, each under its own AES-256-GCM key. The recovery artefact has its key wrapped under a key derived from an operator passphrase with scrypt; every other artefact's key is wrapped by the installation's OpenBao. A manifest of SHA-256 checksums is signed with a non-exportable Ed25519 key, and the restore tool verifies the signature and every artefact before changing anything. Because message and file content inside the archive is already end-to-end encrypted, the backup never contains readable communications.
 
 Scheduled backups use envelope encryption. Each artefact is encrypted with its own randomly generated 256-bit key in AES-256-GCM; that key is wrapped by the installation's OpenBao Transit engine under a non-exportable key, and only the wrapped form is stored. Each run produces a manifest (source, copies, sizes, SHA-256 checksums, wrapped keys) signed with a non-exportable Ed25519 key in the same OpenBao and stored next to every copy. A restore verifies the manifest signature against that key before anything else, then the artefact checksum, and the authentication tag protects the data while it is decrypted; a manifest signed by any other key, an edited manifest or an altered artefact is refused. A stolen set of backup copies is therefore useless without the installation's OpenBao. Adapter credentials are themselves stored encrypted by OpenBao. Chapter 32 covers backup operations.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

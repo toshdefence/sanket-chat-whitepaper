@@ -2,6 +2,8 @@
 
 # 37. Feature Catalogue
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Each capability is described by what it does, how it works, its security value, the options available to administrators, and its boundaries.
 
 *Table 60: Feature catalogue*
@@ -38,6 +40,12 @@ Each capability is described by what it does, how it works, its security value, 
 | **Usage analytics** | First-party usage counts | A processor on the installation aggregates pseudonymous counts; no content; no third party | Operational insight without telemetry leaving the installation | On by default; organisation switch (step-up, audited); installation lock; delete all collected analytics | Audit logs and app-version records are not analytics and stay on |
 
 Roadmap capabilities include sealed sender, conversation-level classification labels, per-share file revocation, forensic watermarking and push-to-talk. Server-side call recording is deliberately excluded by design.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

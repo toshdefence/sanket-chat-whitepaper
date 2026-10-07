@@ -2,6 +2,8 @@
 
 # 4. Sovereignty as a Security Control
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Sovereignty is often treated as a hosting statement: the servers sit in a particular country. In security terms that is the least important part. What matters is who can read, change, switch off or observe the system, and under whose legal authority they can be compelled to do so.
 
 A communications platform has many points of control besides the servers: the people who administer it, the keys that protect it, the identity system that admits users, the logs that record its use, the software updates that change its behaviour, and the third-party services it calls while running. An organisation is sovereign over its communications only when each of these points of control sits inside its own security boundary, or can be moved there.
@@ -91,6 +93,12 @@ The effect of these properties is easiest to see by comparing the questions an e
 > - Mobile operating systems: Apple iOS devices receive wake-up notifications through Apple's push service when the customer chooses to use it. SANKET sends only generic, content-free payloads on that path, and air-gapped deployments can operate without it (Chapter 23).
 >
 > - Endpoint and app distribution: smartphones and their operating systems are made by third parties. Customers with the highest assurance requirements should use managed devices and enterprise distribution channels (Chapter 14).
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

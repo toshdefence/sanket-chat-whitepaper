@@ -2,6 +2,8 @@
 
 # 32. Availability, High Availability and Disaster Recovery
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Communications matter most when other systems are under stress. This chapter covers denial-of-service resistance, the resilience of the single-host profile, the multi-host high-availability profile with second-site recovery, behaviour when an identity provider is unavailable, and backup and recovery.
 
 ## 32.1 Denial of Service and Resource Exhaustion
@@ -90,6 +92,12 @@ For single-host installations, and for any installation's backup-based recovery,
 7. **Recover PKI:** re-issue the edge certificate from the customer CA if the original key is unavailable.
 
 Customers should validate restoration on their own infrastructure as part of acceptance and at a regular interval thereafter.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

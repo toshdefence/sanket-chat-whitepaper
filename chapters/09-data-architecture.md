@@ -2,6 +2,8 @@
 
 # 9. Data Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 This chapter classifies every major category of data held by an installation according to what protects it. The classification is the basis for the server-compromise analysis in Chapter 28.
 
 ## 9.1 Data Stores
@@ -43,6 +45,12 @@ Message ciphertext is held on the server only as long as delivery requires. When
 > **Security Property - Effect on historical exposure**
 >
 > Because delivered ciphertext is removed from the server, a later compromise of the database exposes far less history than the volume of traffic might suggest, and even that ciphertext is protected by the forward secrecy of the Double Ratchet (Chapter 12).
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

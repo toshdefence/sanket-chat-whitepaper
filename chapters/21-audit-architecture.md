@@ -2,6 +2,8 @@
 
 # 21. Audit Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET makes the use and administration of the system accountable without making communications readable. Audit records describe security and administrative events; they never contain message content, ciphertext, keys or file contents.
 
 *Table 39: Separation of content and audit metadata*
@@ -39,6 +41,12 @@ The chain head is signed at regular intervals with an Ed25519 key held non-expor
 ## 21.4 Administrators Cannot Audit Plaintext
 
 Because audit is metadata-only and the server holds no content keys, there is no audit view, export or administrative action that reveals message plaintext. Organisations that need content supervision must implement it at the endpoint under their own policy; SANKET does not provide a server-side mechanism for it.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

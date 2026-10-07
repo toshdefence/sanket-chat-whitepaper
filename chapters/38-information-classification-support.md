@@ -2,6 +2,8 @@
 
 # 38. Information Classification Support
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Many customers handle information under a classification scheme, whether national markings or customer-defined labels. This chapter states plainly what SANKET does and does not do in that respect.
 
 > [!NOTE]
@@ -35,6 +37,12 @@ Labels are an aid to handling discipline among authorised users of one installat
 ## 38.3 Policy Support Is Not Accreditation
 
 Classification-aware handling does not by itself authorise a system to process government classified information. Formal accreditation of a system for a given classification level is a decision of the competent national authority, based on assessment of the whole system: platform, infrastructure, endpoints, personnel and procedures. SANKET is not accredited for any national classification level at the date of this document.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

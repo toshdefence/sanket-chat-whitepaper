@@ -2,6 +2,8 @@
 
 # 26. PKI Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET uses three distinct trust systems, and it is important not to confuse them: the customer's X.509 PKI for transport, libsignal identity keys for messaging, and Tosh Defence's signing keys for licences and releases.
 
 ![PKI hierarchy](../images/pki.png)
@@ -45,6 +47,12 @@ libsignal identity keys are not certificates and are not issued by any CA. Their
 ## 26.4 Vendor Signing Keys
 
 Tosh Defence signs licences and release manifests with Ed25519 keys held as non-exportable keys in its own OpenBao. Installations hold only the public keys: a licence trust bundle, itself signed by a root key and listing active, previous and revoked licence keys, and a release verification key configured in the installation environment. A bundle cannot introduce its own trust anchor. Each release manifest also carries a monotonic sequence number and an expiry, and connected upgrades check a short-lived timestamp statement from the vendor registry signed with a separate key (Chapter 30). These signatures are classical Ed25519; hybrid Ed25519 plus ML-DSA signatures are on the roadmap and are held until an ML-DSA implementation has a published independent audit or an issued CMVP certificate (Chapter 39).
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # Appendix H - Network and Protocol Categories
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 | Category | Protocol | Direction | Notes |
 | --- | --- | --- | --- |
 | **Client application traffic** | HTTPS / WSS (TLS 1.3 or 1.2) | Inbound to edge | All API, WebSocket, console and signalling traffic |
@@ -16,6 +18,12 @@
 | **Second-site replication (high-availability profile)** | Database streaming replication and WAL archive; object-storage site replication; encrypted secrets snapshots | Site to site | Asynchronous; customer-operated link |
 | **Administration** | SSH via bastion | Management network | Customer-operated |
 | **Backups** | Customer-chosen transport | Outbound to backup zone | Encrypted archives |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

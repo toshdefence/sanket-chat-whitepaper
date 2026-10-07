@@ -2,6 +2,8 @@
 
 # Appendix A - Cryptographic Algorithm Reference
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 *Table 74: Algorithms and libraries used in the described release*
 
 | Purpose | Algorithm / construction | Library or component | Reference |
@@ -36,6 +38,12 @@
 | **TOTP secrets at rest** | AES-256-GCM, key derived with HKDF-SHA256 from a dedicated installation secret, bound to the account | Node.js crypto | SP 800-38D; RFC 5869 |
 
 *Libraries are chosen under SANKET's audited-library policy (Chapter 40). libsignal is used without modification.*
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

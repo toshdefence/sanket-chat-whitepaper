@@ -2,6 +2,8 @@
 
 # 40. Cryptographic Certification Roadmap
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Customers in regulated and national-security sectors may require evaluated cryptography and certified products. This chapter describes how SANKET approaches certification. No certification has been achieved at the date of this document.
 
 ## 40.1 Types of Requirement
@@ -25,6 +27,12 @@ For Indian government and defence customers, Tosh Defence intends to pursue eval
 > **Important - Status**
 >
 > SANKET holds no independent security certification and has not been formally accredited by any authority at the date of this document. The security reviews performed to date are internal engineering reviews. Customers should verify current certification status with Tosh Defence for the release they deploy.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

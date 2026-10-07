@@ -2,6 +2,8 @@
 
 # 46. What SANKET Does Not Claim
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Precise claims are more useful than broad ones. The statements below define the edges of SANKET's security properties.
 
 1. End-to-end encryption cannot protect plaintext on a fully compromised authorised endpoint.
@@ -20,6 +22,12 @@ Precise claims are more useful than broad ones. The statements below define the 
 14. Key protection on each device is bounded by the key store its platform provides.
 15. A file already delivered cannot be revoked per share, and roadmap capabilities such as push-to-talk, forensic watermarking and conversation-level classification labels are not claimed.
 16. No responsible platform can guarantee absolute immunity from compromise.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

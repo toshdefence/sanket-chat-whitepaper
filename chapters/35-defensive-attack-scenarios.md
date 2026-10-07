@@ -2,6 +2,8 @@
 
 # 35. Defensive Attack Scenarios
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 The following scenarios walk through realistic attacks from the defender's perspective: how each is prevented, detected, contained and recovered from, and what risk remains. They describe defensive behaviour only.
 
 ## 35.1 Scenario 1: Untrusted public network interception
@@ -135,6 +137,12 @@ The following scenarios walk through realistic attacks from the defender's persp
 | **Containment** | Removal; device revocation if the person is leaving. |
 | **Recovery** | Consider rotating any shared secrets discussed. |
 | **Residual risk** | The removed user keeps whatever they already read or saved. |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

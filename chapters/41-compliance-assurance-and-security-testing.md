@@ -2,6 +2,8 @@
 
 # 41. Compliance, Assurance and Security Testing
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 Assurance comes from evidence that others can check. This chapter sets out the current status of formal assurance, the testing SANKET performs, and the independent assessment Tosh Defence recommends customers commission.
 
 ## 41.1 Assurance Status
@@ -72,6 +74,12 @@ SANKET has undergone several rounds of structured internal security review of th
 | **Expired certificates** | Clients refuse expired or mismatched edge certificates; certificate pins enforced |
 | **Group membership changes** | Removed members receive no new copies; call re-keying on join and leave |
 | **Downgrade** | Server refuses lower call profiles; edge refuses weaker TLS suites; older or expired release manifests refused |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

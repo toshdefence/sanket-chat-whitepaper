@@ -2,6 +2,8 @@
 
 # 34. Security Control Matrix
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 The matrix maps each security objective to the threats it addresses, the controls that implement it, where those controls operate, the relevant standards, and the residual risk.[^67]
 
 *Table 58: Security control matrix*
@@ -25,6 +27,12 @@ The matrix maps each security objective to the threats it addresses, the control
 | **Resilience** | Host failure, data loss | Encrypted backups; restore tooling; health checks; multi-host high-availability profile with an asynchronous second site and drill tooling | Operations | NIST SP 800-34 | Writes since the last replicated point on a site loss (design target RPO 5 minutes); recovery time of a single-host profile |
 | **Supply-chain integrity** | Malicious or tampered release | Signed manifest with sequence number and expiry; signed timestamp on connected upgrades; hashes; pinned sources; offline verification | Build, deployment | NIST SP 800-218; SLSA (intent) | Compromise upstream of the build |
 | **Administrative control** | Abuse of administrator power | FIDO2 security keys for administrators; federation only to the customer's identity provider; least privilege; audit; no content keys | Application | NIST SP 800-53 AC-5, AC-6 | Host-level administrators (separation of duties) |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

@@ -2,6 +2,8 @@
 
 # 25. Network Architecture and Segmentation
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 A SANKET installation exposes a deliberately small network surface. This chapter describes what the released profile exposes, how internal traffic flows, and the reference architectures Tosh Defence recommends for different environments.
 
 ## 25.1 Exposed Surface of the Released Profile
@@ -67,6 +69,12 @@ Draft Helm charts exist, but the built high-availability profile is multi-host D
 | **Backups** | Installation | Backup zone | Encrypted archives |
 | **Apple push (connected, optional)** | Installation | Apple push service | Only if iOS background wake-up is required |
 | **Everything else** | Installation | Anywhere | Deny by default |
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 

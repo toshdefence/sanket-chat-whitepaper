@@ -2,6 +2,8 @@
 
 # 15. Role and Policy Architecture
 
+*Part of the [SANKET Technical Security & Architecture Whitepaper](../README.md) by [Tosh Defence](../ABOUT.md#about-tosh-defence), public edition 2.0.*
+
 SANKET separates five things that are often merged: who a person is, what they are allowed to do, which content they can cryptographically read, which devices are trusted, and what administrative power they hold.
 
 *Table 28: Five distinct control concepts*
@@ -86,6 +88,12 @@ Policies apply to the whole installation and are set by administrators with the 
 ## 15.5 Attribute-Based and Hierarchical Policy
 
 SANKET's current model is role-based for administrators and membership-based for content, with installation-wide policy. It does not implement attribute-based access control, per-department policy or an organisational hierarchy with inherited permissions. Large organisations typically deploy separate installations for separate security domains, which gives strong compartmentalisation at the cost of cross-domain communication, and installation-level separation remains the recommended separation between formally accredited levels. Per-message and per-file classification labels are implemented (Chapter 38); hierarchical units, attribute-based policy, conversation-level labels and a per-label handling matrix are roadmap directions.
+
+---
+
+### About SANKET
+
+SANKET (संकेत) by [Tosh Defence](../ABOUT.md#about-tosh-defence) is a sovereign secure communications platform for defence, government and other high-trust organisations: end-to-end encrypted messaging, file exchange, voice and video calls and priority broadcast, built on Signal's official libsignal library and AES-256, self-hosted on infrastructure the organisation owns, including air-gapped networks. [About SANKET and Tosh Defence](../ABOUT.md) | [Website](https://www.sanket.chat) | [Full whitepaper](../README.md)
 
 ---
 
