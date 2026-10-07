@@ -33,7 +33,7 @@ Tosh Defence is an AI-first defence technology company building sovereign intell
 Tosh Defence Private Limited designs, builds and supports SANKET, its sovereign secure communications platform for organisations that
 cannot hand their infrastructure, keys or logs to an outside party.
 
-- Address: Unit 10, Ground Floor, Centrum Plaza, Golf Course Road, Sector 53, Gurugram, Haryana 122011, India
+- Address: Springhouse Co-working, LG-06, DLF Grand Mall, Near Sinkandarpur Metro Station, DLF City Phase-1, Gurgaon, Haryana-122002
 - Email: hello@toshdefence.com
 - Phone: +91-9205070332
 - Websites: [toshdefence.com](https://toshdefence.com) | [www.sanket.chat](https://www.sanket.chat)
