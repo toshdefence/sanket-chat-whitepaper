@@ -1,0 +1,73 @@
+<!-- SANKET Technical Security & Architecture Whitepaper, public edition, version 2.0. Generated from docs/whitepaper; do not edit by hand. -->
+
+# 17. Message Security Lifecycle
+
+This chapter follows a single message from composition to deletion and records, at each stage, where plaintext, ciphertext and keys exist, what metadata is produced and which threat each stage mitigates.
+
+![Message encryption lifecycle](images/msgflow.png)
+
+*Figure 9: Message encryption lifecycle*
+
+## 17.1 Delivery Reliability
+
+Each composed message carries an idempotency key that is identical on every retry, and the server answers a repeat with the message it already stored, so a retried send can never be delivered twice. While offline, mobile and desktop clients hold outbound text messages in an encrypted outbox for up to seven days and send them on reconnection; both hold attachments and voice notes the same way, as encrypted copies, sending each with the same key and naming the file it uploaded. Mobile and desktop use the same API contract for sending, retry and receipts, and decide which failures to retry by one shared rule: no response, a timeout, rate limiting and server errors (an upgrade's maintenance window included) are retried with a backoff that doubles from five seconds to at most one hour; any other rejection by the server, and a message that cannot be encrypted for its recipients or encoded, marks the message as failed in the conversation and is not retried.
+
+Before encrypting, the sending device checks every recipient device the installation names against that account's signed device list (Chapters 13 and 14). The check runs on every fan-out path, on mobile and desktop alike: one-to-one and group messages, identity rotation, call frame keys, location requests, encrypted broadcasts and the attachment keys carried inside messages. A device that is not on the signed list receives no copy, and the user is shown why, so a device added by the server alone never receives content.
+
+*Table 33: Message lifecycle: plaintext, ciphertext, keys, metadata and threats by stage*
+
+| Stage | Plaintext location | Ciphertext location | Key location | Metadata generated | Threat mitigated |
+| --- | --- | --- | --- | --- | --- |
+| **1. User authenticated** | Sender device (UI) | None | Device secure store | Sign-in audit event | Credential theft (TOTP), session hijack (device binding) |
+| **2. Device authorised** | - | - | Device secure store | None per request; audit on state changes | Revoked, lost or rogue devices |
+| **3. Recipient devices resolved and verified** | - | - | Public keys from server; each recipient's signed device list checked on the sender | Server learns the sender is about to message the conversation | Sending to removed members (active-membership check); a device added by the server (signed device lists) |
+| **4. Session established (first message)** | - | PQXDH handshake material | New session state on sender | One-time prekey consumed on server | Harvest-now-decrypt-later (Kyber); impersonation (signed prekeys) |
+| **5. Encrypted locally** | Sender memory | One libsignal ciphertext per recipient device | Message keys derived and deleted | None | Server and network disclosure |
+| **6. Transmitted** | - | Inside TLS | - | TLS endpoints, size, time | Network observers, tampering (TLS + MAC) |
+| **7. Received by server** | - | Per-device rows | - | Sender account and device, recipient devices, conversation, time, padded size | Duplicate sends (idempotency key); flooding (rate limits) |
+| **8. Stored for delivery** | - | PostgreSQL | - | Delivery status | Database theft exposes ciphertext only for bodies |
+| **9. Delivered** | - | WebSocket or fetch over TLS | - | Wake-up push (content-free) | Push-channel disclosure (sealed or generic payloads) |
+| **10. Decrypted locally** | Recipient memory, then SQLCipher | - | Recipient session advanced | None | Tampering (MAC); replay (duplicate detection) |
+| **11. Delivery acknowledgement** | - | - | - | Delivery receipt | - |
+| **12. Read acknowledgement** | - | - | - | Read receipt (if enabled by policy and user) | Unwanted presence disclosure (policy) |
+| **13. Retention applies** | Recipient device | Tombstoned 72 h after full delivery | - | Stub row for ordering | Long-term server-side ciphertext accumulation |
+| **14. Expiry applies (if configured)** | Removed from devices at expiry | Deleted from server at expiry | - | - | Exposure of stale content on devices |
+| **15. Server stub deleted** | - | Hard-deleted after 90 days | - | - | - |
+| **16. Audit metadata retained** | - | - | - | Message-sent audit event with conversation identifier, never content | Repudiation of administrative actions |
+
+## 17.2 Content Envelope
+
+Inside every libsignal message is a versioned content envelope (version 3). It declares what the message is (an ordinary message, a reaction or a broadcast) and carries a message identifier generated by the sender, identical in every per-device copy, so that every device refers to the same message by the same identifier without the server assigning it. It also carries the optional classification label of the message and of each attachment (Chapter 38), so the server can neither read nor alter a label. Mobile and desktop produce byte-identical envelopes for the same content.
+
+Envelope versions are introduced under tenant control and only once every client platform can read them; a message in an envelope version the app cannot yet read is kept on the device and shown once the app is updated.
+
+## 17.3 Message Adjuncts
+
+Replies (the quoted excerpt), link previews, shared locations, shared contact cards and forwarded-message references travel inside the end-to-end encrypted message, together with the text, in the content envelope. The envelope is padded to fixed-size blocks of 160 bytes before encryption, so the ciphertext size reveals only a size band, not the exact length of the text. The server keeps only two delivery flags next to the ciphertext: the idempotency key that makes a resend harmless and a flag that the sender dismissed a link preview. Each device keeps the decrypted fields in its encrypted local database. Reactions travel as end-to-end encrypted messages like any other; each device computes the counts (below). Each of these features is controlled by tenant policy: link previews are off by default, and location sharing, contact sharing, quoting and reactions can each be disabled where an organisation's handling rules require it.
+
+A malformed or oversized envelope is shown as a notice that the message could not be displayed; one from a later version asks the user to update the app and is kept on the device so the updated app can show it.
+
+## 17.4 Reactions
+
+A reaction is a small libsignal message whose envelope names the target message by its identifier and carries the emoji, or its removal. The server stores it like any other message, as opaque per-device rows tombstoned on the same schedule, sends no push for it, and does not count it as unread or as a conversation's last message. Each device computes the counts itself: for each sender the latest reaction wins, and the sender is the one libsignal authenticated, never a name written inside the content. The earlier path that kept reactions in clear on the server has been removed, and the clear reaction records it had stored were deleted.
+
+A device that joins a large group later, or whose copies of older reactions have already been tombstoned, cannot compute counts for old messages. For that case a tenant option, off by default, lets the server keep an emoji-free count per message in large groups: the server then learns who reacted to which message, never with which emoji, and clients show the full breakdown from their own copies whenever they have them (Chapter 20). Reactions can still be disabled by policy.
+
+## 17.5 Encrypted Broadcasts
+
+Priority broadcasts to large audiences are end-to-end encrypted messages too. They are sent by a dedicated broadcast-sender account (Chapter 27) from its one approved desktop, whose main process (never the user interface process) encrypts the broadcast separately for every recipient device with a per-device libsignal Double Ratchet session, without sender keys. The fan-out is a resumable job kept in the desktop's SQLCipher database, with progress, an estimated time and a cancel control; the sender's libsignal sessions live in their own SQLCipher store. An attachment is encrypted once on the sender desktop with a per-file AES-256-GCM key and uploaded once, and the key travels inside each device's copy (Chapter 18).
+
+The server holds the broadcast's metadata (audience, priority, acknowledgement deadline, expiry and receipts) and the per-device ciphertext, which it deletes as soon as each device confirms it has stored the broadcast, and otherwise at expiry. Priority, deadline, sent time and expiry are also carried inside the encrypted envelope, and a client refuses a copy whose envelope disagrees with the server's record, so a hostile server cannot downgrade a critical broadcast, move its deadline or replay an old one. Encrypted broadcasts are sent immediately (no scheduling and no drafts held by the server), must carry an expiry and have a server-enforced recipient limit counted in devices. A device provisioned while a broadcast is still live is queued and encrypted for by the sender desktop. Recipients pin the sending device and identity and are shown an identity-change notice if a later broadcast comes from another device or key.
+
+Push messages, notification records, escalation reminders and administrator alerts for an encrypted broadcast carry only identifiers, priority and deadlines; the lock-screen text on iOS and Android is generic by priority (for example "Urgent broadcast"). Acknowledgement, deadline and escalation work on this metadata, and the deadline starts when the fan-out has finished. Sending is desktop-only by design; receiving, display and acknowledgement are identical on mobile and desktop. A separate notice type, which the server can read, remains for non-sensitive announcements and is always labelled as not end-to-end encrypted (Chapter 27). The sending desktop shows the recipient count before it sends, and only devices on each recipient's signed device list receive a copy.
+
+## 17.6 Editing and Deleting
+
+- **Edit** (configurable): only the sender can edit, within a window; the edited message is re-encrypted with a fresh fan-out.
+- **Delete for everyone** (configurable, within a time window): the server blanks every copy. Recipients' clients remove the message; a recipient who has already read or copied it may retain that knowledge.
+- **Delete for me:** removes the message from the user's own view and device.
+- **Disappearing messages** (configurable): when allowed by policy, users choose durations from one hour to ninety days; administrators can force a maximum duration, from 30 seconds to 30 days, and the shorter of it and the user's own choice applies. Expired messages are deleted from the server and purged from device caches and attachments.
+
+---
+
+[Previous: 16. Zero Trust Architecture](16-zero-trust-architecture.md) | [Contents](../README.md) | [Next: 18. File Security Lifecycle](18-file-security-lifecycle.md)
